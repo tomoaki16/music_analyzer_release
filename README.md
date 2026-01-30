@@ -1,2 +1,18 @@
-# music_analyzer_release
-Music Analyzer is a Windows desktop app for offline audio analysis.  Features: - BPM / key / structure analysis  Requirements: - Windows 10 / 11 (64-bit)  Notes: Unsigned executable. Windows may show a warning on first launch.
+# Music Analyzer
+
+ローカルの音声ファイル (WAV/MP3) を読み込み、波形表示やBPM・キー推定などを行うデスクトップアプリケーションです。
+全ての解析はオフライン（ローカル）で行われるため、プライバシーも安心です。
+
+## インストール方法 (Windows)
+
+1. GitHubの [Releases](../../releases) ページから、最新のインストーラー (`.exe` ファイル) をダウンロードしてください。
+2. ダウンロードしたファイルをダブルクリックして実行します。
+3. 画面の指示に従ってインストールしてください。
+   > **注意**: Windows SmartScreenの警告が表示される場合がありますが、「詳細情報」をクリックしてから「実行」を選択して進めてください（署名未登録のため）。
+
+## 使い方
+
+1. アプリを起動します。
+2. ".wav" または ".mp3" ファイルをウィンドウにドラッグ＆ドロップするか、"Load Audio" ボタンからファイルを選択します。
+3. 自動的に解析が始まり、波形、BPM、キーなどが表示されます。
+4. 解析結果はコピーボタンでクリップボードに保存できます。
