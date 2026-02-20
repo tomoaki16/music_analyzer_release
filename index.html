@@ -120,6 +120,17 @@ pre{
   font-size:13px;
   margin-top:12px;
 }
+.hr{
+  height:1px;
+  background:rgba(255,255,255,0.10);
+  margin:14px 0;
+  border:0;
+}
+a.inline{
+  color:var(--accent);
+  text-decoration:none;
+}
+a.inline:hover{ text-decoration:underline; }
 </style>
 </head>
 
@@ -141,12 +152,18 @@ AI生成楽曲を「傾向」で比較するための<br>
 <div class="panel cta">
   <strong>ダウンロード</strong>
   <p class="small">
-    下のボタンから最新版を開き、<b>.dmg</b> をダウンロードしてください。
+    下のボタンを押すと <b>.dmg のダウンロードがすぐ始まります</b>（リリースページに移動しません）。
   </p>
 
-  <a class="btn" href="https://github.com/tomoaki16/music_analyzer_release/releases/latest">
-    最新版を開く（GitHub Releases）
+  <!-- ✅ 重要：Assetsのファイル名と完全一致が必要です -->
+  <!-- もしAssets名が違う場合：末尾の .dmg 名だけ置き換えてください -->
+  <a class="btn" href="https://github.com/tomoaki16/music_analyzer_release/releases/latest/download/music-analyzer-mac-aarch64.dmg">
+    .dmg をダウンロード（Mac / Apple Silicon）
   </a>
+
+  <p class="small" style="margin-top:10px;">
+    リリースノートを見る：<a class="inline" href="https://github.com/tomoaki16/music_analyzer_release/releases/latest">GitHub Releases</a>
+  </p>
 
   <p class="small">
     ※ Intel Mac には対応していません
@@ -163,42 +180,70 @@ AI生成楽曲を「傾向」で比較するための<br>
   <h2>インストール手順</h2>
 
   <div class="callout">
-    Appleの有料登録をしていないため、<br>
-    初回だけ警告が表示されます。<br>
-    通信しないオフラインアプリなので安心して進めてください。
+    Appleの有料登録（署名）をしていないため、<br>
+    初回だけ警告が表示されることがあります。<br>
+    このアプリは <b>通信しない（オフライン）</b> ので、手順どおり進めればOKです。
   </div>
 
   <h3>① アプリを配置 <span class="pill ok">必須</span></h3>
   <ol>
-    <li>.dmg を開く</li>
-    <li>music-analyzer を Applications にドラッグ</li>
+    <li>ダウンロードした <b>.dmg</b> を開く</li>
+    <li><b>music-analyzer</b> を <b>Applications</b> にドラッグ</li>
   </ol>
+
+  <hr class="hr">
 
   <h3>② 初回起動（まずはこれ） <span class="pill ok">おすすめ</span></h3>
   <ol>
-    <li>Applications フォルダを開く</li>
-    <li>music-analyzer を <b>右クリック</b></li>
-    <li>「開く」を選択</li>
-    <li>もう一度「開く」を押す</li>
+    <li><b>Applications</b> フォルダを開く</li>
+    <li><b>music-analyzer</b> を <b>右クリック</b>（または Controlキー+クリック）</li>
+    <li>「<b>開く</b>」を選択</li>
+    <li>もう一度「<b>開く</b>」を押す（確認が出たら）</li>
   </ol>
 
-  <h3>③ うまくいかない場合 <span class="pill warn">設定から許可</span></h3>
+  <div class="callout">
+    ※ ここで「開けない」系の警告が出ても、次の手順で進められます（下へ）。
+  </div>
+
+  <hr class="hr">
+
+  <h3>③ よく出る警告（ゴミ箱に入れないでOK） <span class="pill warn">重要</span></h3>
+  <div class="callout">
+    たとえば以下のような表示が出ることがあります：<br><br>
+    ・「<b>“music-analyzer”は破損しているため開けません。ゴミ箱に入れる必要があります。</b>」<br><br>
+    これは <b>未署名アプリ</b> で起きることがあり、対処で進められます。 :contentReference[oaicite:2]{index=2}
+  </div>
   <ol>
-    <li>一度ダブルクリックしてブロックさせる</li>
-    <li>🍎 → システム設定 → プライバシーとセキュリティ</li>
-    <li>「このまま開く」を押す</li>
+    <li>その画面では <b>「ゴミ箱に入れる」ではなく「キャンセル」</b> を押す</li>
+    <li>次の「④ 設定から許可」または「⑤ ターミナル（最終手段）」へ進む</li>
   </ol>
 
-  <h3>④ 最終手段（30秒） <span class="pill warn">ターミナル</span></h3>
+  <hr class="hr">
+
+  <h3>④ うまくいかない場合（設定から許可） <span class="pill warn">次に試す</span></h3>
   <ol>
-    <li>⌘ + スペース → 「ターミナル」と入力</li>
+    <li><b>music-analyzer</b> を一度 <b>ダブルクリック</b>（ブロックされたらOK）</li>
+    <li>🍎 → <b>システム設定</b> → <b>プライバシーとセキュリティ</b></li>
+    <li>下の方に出る <b>「このまま開く」</b> を押す</li>
+    <li>もう一度、Applicationsの <b>music-analyzer</b> を開く</li>
+  </ol>
+
+  <hr class="hr">
+
+  <h3>⑤ 最終手段（30秒） <span class="pill warn">ターミナル</span></h3>
+  <ol>
+    <li>⌘ + スペース → 「<b>ターミナル</b>」と入力して開く</li>
     <li>以下をコピペして Enter</li>
   </ol>
 
-<pre><code>xattr -cr /Applications/music-analyzer.app</code></pre>
+  <pre><code>xattr -cr /Applications/music-analyzer.app</code></pre>
+
+  <ol start="3">
+    <li><b>Applications</b> の <b>music-analyzer</b> を開く</li>
+  </ol>
 
   <div class="callout">
-    ※ どの方法も初回のみ必要です。<br>
+    ※ どの方法も <b>初回のみ</b> 必要です。<br>
     2回目以降は普通にダブルクリックで起動します。
   </div>
 </div>
@@ -212,7 +257,7 @@ AI生成楽曲を「傾向」で比較するための<br>
   </ul>
 
   <div class="callout">
-    困ったらX（配布元）にスクショを送ってください。
+    困ったら：X（配布元）に <b>スクショ</b> を送ってください。
   </div>
 </div>
 
