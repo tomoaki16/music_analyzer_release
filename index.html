@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>music-analyzer（Mac / Apple Silicon）ダウンロード</title>
+
+<style>
+:root{
+  --bg:#0b0f19;
+  --panel:rgba(255,255,255,0.06);
+  --text:rgba(255,255,255,0.92);
+  --muted:rgba(255,255,255,0.65);
+  --accent:#38BDF8;
+  --ok:#34D399;
+  --warn:#F59E0B;
+  --border:rgba(255,255,255,0.12);
+  --radius:16px;
+}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 20% 0%,rgba(56,189,248,.15),transparent 60%),var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+.wrap{
+  max-width:820px;
+  margin:0 auto;
+  padding:48px 20px 80px;
+}
+h1{
+  margin:0 0 8px;
+  font-size:30px;
+}
+.subtitle{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:24px;
+}
+.badge{
+  font-size:12px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--border);
+  color:var(--muted);
+}
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  margin-top:20px;
+}
+.cta{
+  text-align:center;
+}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#061018;
+  text-decoration:none;
+  font-weight:700;
+  padding:14px 22px;
+  border-radius:14px;
+  margin-top:14px;
+}
+.btn:hover{opacity:.9}
+.small{
+  font-size:13px;
+  color:var(--muted);
+}
+h2{
+  font-size:18px;
+  margin:0 0 12px;
+}
+ol{padding-left:20px}
+li{margin:8px 0}
+.callout{
+  margin-top:12px;
+  padding:12px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--border);
+  font-size:13px;
+  color:var(--muted);
+}
+.pill{
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+}
+.pill.ok{color:var(--ok);border-color:rgba(52,211,153,.4)}
+.pill.warn{color:var(--warn);border-color:rgba(245,158,11,.4)}
+pre{
+  background:rgba(0,0,0,.35);
+  padding:12px;
+  border-radius:12px;
+  overflow-x:auto;
+  font-size:13px;
+}
+.footer{
+  margin-top:40px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+.highlight{
+  background:rgba(56,189,248,.12);
+  border:1px solid rgba(56,189,248,.3);
+  padding:12px;
+  border-radius:12px;
+  font-size:13px;
+  margin-top:12px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<h1>music-analyzer（Mac版）</h1>
+<p class="subtitle">
+AI生成楽曲を「傾向」で比較するための<br>
+オフライン音楽分析アプリ
+</p>
+
+<div class="badges">
+  <div class="badge">対応：Apple Silicon（M1 / M2 / M3 / M4）</div>
+  <div class="badge">配布形式：.dmg</div>
+  <div class="badge">通信なし（完全オフライン）</div>
+</div>
+
+<div class="panel cta">
+  <strong>ダウンロード</strong>
+  <p class="small">
+    下のボタンから最新版を開き、<b>.dmg</b> をダウンロードしてください。
+  </p>
+
+  <a class="btn" href="https://github.com/tomoaki16/music_analyzer_release/releases/latest">
+    最新版を開く（GitHub Releases）
+  </a>
+
+  <p class="small">
+    ※ Intel Mac には対応していません
+  </p>
+
+  <div class="highlight">
+    重要：ダウンロード後は<br>
+    <b>Applications に入れてから起動してください</b><br>
+    （dmgの中から直接開かない）
+  </div>
+</div>
+
+<div class="panel">
+  <h2>インストール手順</h2>
+
+  <div class="callout">
+    Appleの有料登録をしていないため、<br>
+    初回だけ警告が表示されます。<br>
+    通信しないオフラインアプリなので安心して進めてください。
+  </div>
+
+  <h3>① アプリを配置 <span class="pill ok">必須</span></h3>
+  <ol>
+    <li>.dmg を開く</li>
+    <li>music-analyzer を Applications にドラッグ</li>
+  </ol>
+
+  <h3>② 初回起動（まずはこれ） <span class="pill ok">おすすめ</span></h3>
+  <ol>
+    <li>Applications フォルダを開く</li>
+    <li>music-analyzer を <b>右クリック</b></li>
+    <li>「開く」を選択</li>
+    <li>もう一度「開く」を押す</li>
+  </ol>
+
+  <h3>③ うまくいかない場合 <span class="pill warn">設定から許可</span></h3>
+  <ol>
+    <li>一度ダブルクリックしてブロックさせる</li>
+    <li>🍎 → システム設定 → プライバシーとセキュリティ</li>
+    <li>「このまま開く」を押す</li>
+  </ol>
+
+  <h3>④ 最終手段（30秒） <span class="pill warn">ターミナル</span></h3>
+  <ol>
+    <li>⌘ + スペース → 「ターミナル」と入力</li>
+    <li>以下をコピペして Enter</li>
+  </ol>
+
+<pre><code>xattr -cr /Applications/music-analyzer.app</code></pre>
+
+  <div class="callout">
+    ※ どの方法も初回のみ必要です。<br>
+    2回目以降は普通にダブルクリックで起動します。
+  </div>
+</div>
+
+<div class="panel">
+  <h2>安心ポイント</h2>
+  <ul>
+    <li>完全オフライン（通信しません）</li>
+    <li>広告なし・課金なし</li>
+    <li>データはMac内だけで処理されます</li>
+  </ul>
+
+  <div class="callout">
+    困ったらX（配布元）にスクショを送ってください。
+  </div>
+</div>
+
+<div class="footer">
+© music-analyzer / GitHub Releases で配布
+</div>
+
+</div>
+</body>
+</html>
